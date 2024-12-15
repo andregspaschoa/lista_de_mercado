@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "260536054576",
+    "firebase_url": "https://lista-de-mercado-flutter-app-default-rtdb.firebaseio.com",
+    "project_id": "lista-de-mercado-flutter-app",
+    "storage_bucket": "lista-de-mercado-flutter-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260536054576:android:4f228b58ef669293128ef5",
+        "android_client_info": {
+          "package_name": "com.lista_de_mercado.br"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9CRUl-1Or6KgqJTjxqIVupxJpFCWmx1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
