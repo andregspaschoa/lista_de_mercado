@@ -1,14 +1,13 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: use_build_context_synchronously
 
-import 'package:flutter/material.dart';
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 import 'package:lista_de_mercado/data/categories.dart';
 import 'package:lista_de_mercado/models/category.dart';
 import 'package:lista_de_mercado/models/grocery_item.dart';
-//import 'package:lista_de_mercado/models/grocery_item.dart';
 
 class NewItem extends StatefulWidget {
   const NewItem({super.key});
@@ -48,19 +47,19 @@ class _NewItemState extends State<NewItem> {
           },
         ),
       );
-
+      // ignore: avoid_print
+      print('Response body: ${response.body}');
       final Map<String, dynamic> resData = json.decode(response.body);
 
       if (!context.mounted) {
         return;
       }
 
-      // ignore: use_build_context_synchronously
       Navigator.of(context).pop(
         GroceryItem(
-          id: resData['name'],
-          name: _enteredName,
-          quantity: _enteredQuantity,
+          id: resData['name'],  // 'name' aqui é o ID gerado pelo Firebase
+          name: _enteredName,  // Nome real do item
+        quantity: _enteredQuantity,
           category: _selectedCategory,
         ),
       );
